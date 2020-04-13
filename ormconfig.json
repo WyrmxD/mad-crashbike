@@ -1,0 +1,12 @@
+{
+    "type": "sqlite",
+    "host": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "",
+    "database": "./database/crash_data.db",
+    "charset": "latin1",
+    "entities": ["dist/**/*.entity{.ts,.js}"],
+    "synchronize": true,
+    "autoLoadEntities": true
+  }

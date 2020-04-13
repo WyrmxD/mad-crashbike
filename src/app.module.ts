@@ -1,10 +1,13 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConsoleModule } from 'nestjs-console';
+import { CrashModule } from './crash/crash.module';
+import { DataCommand } from './commands/data.command';
+import { ParseCommand } from './commands/parse.command';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [TypeOrmModule.forRoot(), ConsoleModule, CrashModule],
+  controllers: [],
+  providers: [DataCommand, ParseCommand],
 })
 export class AppModule {}
